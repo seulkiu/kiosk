@@ -41,22 +41,7 @@ let tab = document.getElementsByClassName('tab');
 
 // document.querySelector('.tab').addEventListener('click', showMenu);
 
-
-
-// for (const key in menuCoffee) {
-//     for (let i = 0; i < menuCoffee.length; i++){
-//     let li = document.createElement('li');
-//     li.className = 'menu';
-//     let p = document.createElement('p');
-//     p.className = 'menu_name';
-//     p.innerText = menuCoffee[key].name;
-//     li.appendChild(p);
-
-//     console.log(li);
-//     }
-//     document.getElementById('menu').innerHTML = menuCoffee[key].name;
-// }
-
+// 기본 커피메뉴 보여주기
 for (const key in menuCoffee) {
     let li = document.createElement('li');
     li.className = 'menu';
@@ -72,3 +57,5 @@ for (const key in menuCoffee) {
 
     document.getElementById('menu').appendChild(li);
 }
+
+// coffee, tea, sandwich 탭 누르면 해당 리스트 보여주기
