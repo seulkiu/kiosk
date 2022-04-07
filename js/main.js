@@ -37,7 +37,7 @@ let menuSandwich = [
 ]
 
 let menuArea = document.getElementById('menu');
-let tab = document.getElementsByClassName('tab');
+
 
 // document.querySelector('.tab').addEventListener('click', showMenu);
 
@@ -58,4 +58,43 @@ for (const key in menuCoffee) {
     document.getElementById('menu').appendChild(li);
 }
 
+
+for (const key in menuTea) {
+    let li = document.createElement('li');
+    li.className = 'menu';
+    let menuName = document.createElement('p');
+    menuName.className = 'menu_name';
+    menuName.innerText = menuTea[key].name;
+    li.appendChild(menuName);
+
+    let price = document.createElement('p');
+    price.className = 'menu_price';
+    price.innerText = menuTea[key].price;
+    li.appendChild(price)
+
+    document.getElementById('menu').appendChild(li);
+}
+
+for (const key in menuSandwich) {
+    let li = document.createElement('li');
+    li.className = 'menu';
+    let menuName = document.createElement('p');
+    menuName.className = 'menu_name';
+    menuName.innerText = menuSandwich[key].name;
+    li.appendChild(menuName);
+
+    let price = document.createElement('p');
+    price.className = 'menu_price';
+    price.innerText = menuSandwich[key].price;
+    li.appendChild(price)
+
+    document.getElementById('menu').appendChild(li);
+}
 // coffee, tea, sandwich 탭 누르면 해당 리스트 보여주기
+let tab = document.getElementsByClassName('tab');
+
+for(let i = 0; i < tab.length; i++){
+    tab[i].querySelector('.tab').addEventListener('click', function(e){
+        e.preventDefault();
+    })
+}
