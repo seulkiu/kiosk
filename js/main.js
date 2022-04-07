@@ -9,7 +9,8 @@ let menuCoffee = [ //커피메뉴
     {name: '아이스 바닐라빈라떼', price: 5000, 수량: 1},
     {name: '캐러멜라떼', price: 4500, 수량: 1},
     {name: '아이스 캐러멜라떼', price: 5000, 수량: 1},
-    {name: '카페모카', price: 5000, 수량: 1}
+    {name: '카페모카', price: 4500, 수량: 1},
+    {name: '아이스 카페모카', price: 5000, 수량: 1}
 ]
 
 let menuTea = [ //티 메뉴
@@ -42,15 +43,32 @@ let tab = document.getElementsByClassName('tab');
 
 
 
+// for (const key in menuCoffee) {
+//     for (let i = 0; i < menuCoffee.length; i++){
+//     let li = document.createElement('li');
+//     li.className = 'menu';
+//     let p = document.createElement('p');
+//     p.className = 'menu_name';
+//     p.innerText = menuCoffee[key].name;
+//     li.appendChild(p);
+
+//     console.log(li);
+//     }
+//     document.getElementById('menu').innerHTML = menuCoffee[key].name;
+// }
+
 for (const key in menuCoffee) {
-    for (let i = 0; i < menuCoffee.length; i++){
     let li = document.createElement('li');
     li.className = 'menu';
-    let p = document.createElement('p');
-    p.className = 'menu_name';
-    p.innerText = menuCoffee[key];
-    li.appendChild(p);
-    }
-    document.getElementById('menu').innerHTML = menuCoffee;
-}
+    let menuName = document.createElement('p');
+    menuName.className = 'menu_name';
+    menuName.innerText = menuCoffee[key].name;
+    li.appendChild(menuName);
 
+    let price = document.createElement('p');
+    price.className = 'menu_price';
+    price.innerText = menuCoffee[key].price;
+    li.appendChild(price)
+
+    document.getElementById('menu').appendChild(li);
+}
