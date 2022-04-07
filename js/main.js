@@ -32,3 +32,6 @@ let menuSandwich = [
     {name: '치킨클럽샌드위치', price: 6500},
     {name: 'BLT샌드위치', price: 6500}
 ]
+
+let menuArea = document.getElementsByClassName('wrap__left munu_area');
+let tab = document.getElementsByClassName('tab');
