@@ -36,11 +36,6 @@ let menuSandwich = [
     {name: 'BLT샌드위치', price: 6500, 수량: 1}
 ]
 
-// let menuArea = document.getElementById('menu');
-
-
-// document.querySelector('.tab').addEventListener('click', showMenu);
-
 // 기본 커피메뉴 보여주기
 // 함수 만들기
 
@@ -65,39 +60,6 @@ function menuDraw(menu){
     document.getElementById('menu_area').appendChild(li);
     }
 }
-// for (const key in menuTea) {
-//     let li = document.createElement('li');
-//     li.className = 'menu';
-//     let menuName = document.createElement('p');
-//     menuName.className = 'menu_name';
-//     menuName.innerText = menuTea[key].name;
-//     li.appendChild(menuName);
-
-//     let price = document.createElement('p');
-//     price.className = 'menu_price';
-//     price.innerText = menuTea[key].price;
-//     li.appendChild(price)
-
-//     document.getElementById('menu').appendChild(li);
-// }
-
-// for (const key in menuSandwich) {
-//     let li = document.createElement('li');
-//     li.className = 'menu';
-//     let menuName = document.createElement('p');
-//     menuName.className = 'menu_name';
-//     menuName.innerText = menuSandwich[key].name;
-//     li.appendChild(menuName);
-
-//     let price = document.createElement('p');
-//     price.className = 'menu_price';
-//     price.innerText = menuSandwich[key].price;
-//     li.appendChild(price)
-
-//     document.getElementById('menu').appendChild(li);
-// }
-
-
 
 
 
@@ -118,28 +80,6 @@ const selectTab = (tabNum) => {
     }
 }
 
-// const veiw = (list) => {
-//     let menuArea = getElementById('menu_area');
-//     while (menuArea.hasChildNodes()) {
-//         menuArea.removeChild(menuArea.firstChilde);
-//     }
-//     list.forEach((e) => {
-//         let html = `<li class="menu" onclick="selectMenu(${e.id})"><p class="menu_name"><span>${e.name}</span></p><p class="menu_price">${e.price.toLocaleString()} 원</p></li>`;
-//         menuArea.insertAdjacentHTML("beforeend", html);
-//     });
-// }
-
-
-// let tab = document.getElementsByClassName('tab');
-// console.log(tab)
-
-// for(let i = 0; i < tab.length; i++){
-//     tab[i].addEventListener('click', test)
-// }
-
-// function test() {
-//     console.log('ggg');
-// }
 
 window.onload = () => {
     menuDraw(menuCoffee);
