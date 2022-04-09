@@ -91,10 +91,31 @@ for (const key in menuSandwich) {
     document.getElementById('menu').appendChild(li);
 }
 // coffee, tea, sandwich 탭 누르면 해당 리스트 보여주기
-let tab = document.getElementsByClassName('tab');
 
-for(let i = 0; i < tab.length; i++){
-    tab[i].querySelector('.tab').addEventListener('click', function(e){
-        e.preventDefault();
-    })
+const selectTab = (tabNum) => {
+    let temp = [];
+    switch(tabNum) {
+        case 1 :
+            temp = view(menuCoffee);
+            break;
+        case 2 :
+            temp = view(menuTea);
+            break;
+        case 3 :
+            temp = view(menuSandwich);
+            break;
+    }
 }
+
+
+
+// let tab = document.getElementsByClassName('tab');
+// console.log(tab)
+
+// for(let i = 0; i < tab.length; i++){
+//     tab[i].addEventListener('click', test)
+// }
+
+// function test() {
+//     console.log('ggg');
+// }
