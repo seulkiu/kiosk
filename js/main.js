@@ -84,3 +84,9 @@ const selectTab = (tabNum) => {
 window.onload = () => {
     menuDraw(menuCoffee);
 };
+
+// 선택한 메뉴를 화면에 뿌림
+const viewSelectMenu = (menu) => {
+    let cartArea = document.getElementById('cart_area');
+    
+}
