@@ -61,11 +61,7 @@ function menuDraw(menu){
     }
 }
 
-
-
-
 // coffee, tea, sandwich 탭 누르면 해당 리스트 보여주기
-
 const selectTab = (tabNum) => {
     switch(tabNum) {
         case 1 :
