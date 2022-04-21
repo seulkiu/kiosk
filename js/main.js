@@ -81,8 +81,13 @@ window.onload = () => {
     menuDraw(menuCoffee);
 };
 
-// 선택한 메뉴를 화면에 뿌림
-const viewSelectMenu = (menu) => {
-    let cartArea = document.getElementById('cart_area');
-    
+//토탈 상품 갯수, 토탈 금액 리프레시
+const orderInfoRefresh = () => {
+    totalCount = 0;
+    totalPrice = 0;
+    orderMenu.forEach((e) => {
+        totalCount += e.count;
+        totalPrice += e.price * e.count;
+    });
+    document.getElementById
 }
