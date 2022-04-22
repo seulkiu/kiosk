@@ -235,7 +235,7 @@ const selectMenu = (id) => {
     if (orderMenuItem === undefined) {
         selectMenu['count'] = 1;
         orderMenu.push(selectMenu);
-        viewSelectMenu(selectMenu); 
+        viewSelectMenu(selectMenu);
     } else {
         orderMenuItem.count++;
         document.getElementById(`order_${id}`).innerText = orderMenuItem.count;
@@ -265,6 +265,27 @@ const viewSelectMenu = (menu) => {
         <span id="order_price_${menu.id}">${menu.price.toLocaleString()}원</span>
     </div>
 </div>`;
-cartArea.insertAdjacentHTML("beforeend", html);
+    cartArea.insertAdjacentHTML("beforeend", html);
 }
 
+// 주문 리스트에서 수량 증가
+const add = (id) => {
+    let item = orderMenu.find((e) => e.id === id);
+    item.count++;
+    document.getElementById(`order_${id}`).innerText = item.count;
+    document.getElementById(`order_price_${id}`).innerText = `${(item.price * item.count).toLocaleString()}원`;
+    orderInfoRefresh();
+}
+
+// 주문 리스트에서 수량 감소
+const minus = (id) => {
+    let item = orderMenu.find((e) => e.id === id);
+    if(item.count > 1) {
+        item.count--;
+        document.getElementById(`order_${id}`).innerText = item.count;
+        document.getElementById(`order_price_${id}`).innerText = `${(item.price * item.count).toLocaleString()}원`;
+        orderInfoRefresh();
+    }
+}
+
+// 주문 리스트에서 삭제
