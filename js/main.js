@@ -289,3 +289,8 @@ const minus = (id) => {
 }
 
 // 주문 리스트에서 삭제
+const orderDelete = (id) => {
+    orderMenu = orderMenu.filter((e) => e.id != id);
+    document.getElementById(`cart_item_${id}`).remove();
+    orderInfoRefresh();
+}
